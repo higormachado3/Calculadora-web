@@ -1,0 +1,62 @@
+@charset "UFT-8";
+
+
+body
+{
+    background-image: linear-gradient(to right, #BF0449, #D5D977);
+   
+}
+
+
+h1
+{
+    text-align: center;
+    font-size: 43px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #00000093;
+  
+}
+
+.botao
+{
+    
+    background-color: #00000000!important;
+    width: 55px;
+    height: 50px;
+    font-size: 25px;
+    cursor: pointer;
+    margin: 3px;
+    border: none;
+}
+
+
+
+.calculadora{
+    position: absolute;
+    background-color: #00000049;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 15px;
+    padding: 12px;
+}
+
+#resultado{
+    background-color: rgba(255, 255, 255, 0.137);
+    width: 250px;
+    height: 30px;
+    margin: 5px;
+    font-size: 25px;
+    color: black;
+    text-align:left;
+    padding: 5px;
+}
+
+p#assinatura
+{
+    font-family: cursive, Arial, sans-serif;
+    position: absolute;
+    top: 93%;
+    left: 1%;
+    
+}

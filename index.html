@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./Imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora</title>
+</head>
+<body>
+    <div class="fundo">
+        <div class="calculadora">
+            <h1>Calculadora</h1>
+            <p id="resultado"></p>
+            <table >
+                <tr>
+                    <td><button class="botao" onclick="clean()" ><img src="./Imagens/Clear.png" alt="botao_clear"  ;></button></td>
+                    <td><button class="botao" onclick="back()"><img src="./Imagens/Borracha.png" alt="botao_borracha"></button></td>
+                    <td><button class="botao" onclick="insert('/')"><img src="Imagens/Divisao.png" alt="botao_divsao"></button></td>
+                    <td><button class="botao" onclick="insert('*')"><img src="Imagens/X.png" alt="botao_x"></button></td>
+                </tr>
+                <tr>
+                    <td><button class="botao" onclick="insert('7')"><img src="Imagens/7.png" alt="botao_7"></button></td>
+                    <td><button class="botao" onclick="insert('8')"><img src="./Imagens/8.png" alt="botao_8"></button></td>
+                    <td><button class="botao" onclick="insert('9')"><img src="Imagens/9.png" alt="botao_9"></button></td>
+                    <td><button class="botao" onclick="insert('-')"><img src="Imagens/menos.png" alt="botao_menos"></button></td>
+                </tr>
+                <tr>
+                    <td><button class="botao" onclick="insert('4')"><img src="Imagens/4.png" alt="botao_4"></button></td>
+                    <td><button class="botao" onclick="insert('5')"><img src="./Imagens/5.png" alt="botao_5"></button></td>
+                    <td><button class="botao" onclick="insert('6')"><img src="./Imagens/6.png" alt="botao_6"></button></td>
+                    <td><button class="botao" onclick="insert('+')"><img src="Imagens/mais.png" alt="botao_mais"></button></td>
+                </tr>
+                <tr>
+                    <td><button class="botao" onclick="insert('1')"><img src="Imagens/1.png" alt="botao_1"></button></td>
+                    <td><button class="botao" onclick="insert('2')"><img src="Imagens/2.png" alt="botao_2"></button></td>
+                    <td><button class="botao" onclick="insert('3')"><img src="Imagens/3.png" alt="botao_3"></button></td>
+                    <td rowspan="2"><button class="botao" style="height: 106px;" onclick="calcular()"><img src="Imagens/igual.png" alt="botao_igual"></button></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><button class="botao" style="width: 120px;" onclick="insert('0')"><img src="./Imagens/zero.png" alt="botao_0"></button></td>
+                    <td><button class="botao" onclick="insert('.')"><img src="Imagens/ponto.png" alt="botao_ponto"></button></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <p id="assinatura">Higor Machado</p>
+    <script>
+        function insert(num)
+        {
+            var numero = document.getElementById('resultado').innerHTML;
+            document.getElementById('resultado').innerHTML = numero + num;
+        }
+        function clean()
+        {
+            document.getElementById('resultado').innerHTML = "";
+        }
+        function back()
+        {
+            var resultado = document.getElementById('resultado').innerHTML;
+            document.getElementById('resultado').innerHTML = resultado.substring(0, resultado.length -1);
+        }
+        function calcular()
+        {
+            var resultado = document.getElementById('resultado').innerHTML;
+            if(resultado)
+            {
+                document.getElementById('resultado').innerHTML = eval(resultado);
+            }
+            else
+            {
+                document.getElementById('resultado').innerHTML = "Nada..."
+            }
+        }
+
+
+    </script>
+
+</body>
+</html>
